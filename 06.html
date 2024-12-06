@@ -1,0 +1,24 @@
+<script>
+       const numeroInicial = Number(prompt("Informe o número inicial"));
+    const numeroFinal = Number(prompt("Informe o número final"));
+    let listaImpar = [];
+    let listaPar = [];
+
+    if (numeroInicial < numeroFinal){
+        for (let number = numeroInicial; number <= numeroFinal; number++){
+            if (number % 2 === 0){
+                listaPar.push(number);
+            } else{
+                listaImpar.push(number);
+            }
+        }
+    } else{
+        alert("Algo deu errado! Por favor certifique-se que o número inicial seja *menor* que o número inicial");
+    }
+    
+
+    document.write(`Òs números pares que estao entre o ${numeroInicial} e o ${numeroFinal}, são: <br>
+    ${listaPar.join(", ")}; <br>
+    E os impares são: <br>
+    ${listaImpar.join(", ")}.`)
+</script>
